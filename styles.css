@@ -15,11 +15,13 @@ body {
     text-align: center;
     background-color: rgba(0, 0, 0, 0.6);
     backdrop-filter: blur(10px);
-    padding: 60px 40px;
+    padding: 60px 20px; /* Reduced padding for smaller screens */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     color: #f0f0f0;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    position: relative;
+    margin: 20px; /* Added margin for better spacing on smaller screens */
 }
 
 .links {
@@ -44,3 +46,19 @@ body {
 .link-button:hover {
     background-color: #222;
 }
+
+.about-me {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+/* Media Query for screens larger than 1024px (typical desktop screens) */
+@media screen and (min-width: 1024px) {
+    .link-container {
+        margin: 500px; /* Increased margin for larger screens */
+    }
+}
+
